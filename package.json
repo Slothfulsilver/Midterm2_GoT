@@ -1,0 +1,28 @@
+{
+  "name": "midterm-2",
+  "version": "1.0.0",
+  "description": "GoT Guide API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Slothfulsilver/Midterm2_GoT.git"
+  },
+  "keywords": [
+    "GoT",
+    "express",
+    "API"
+  ],
+  "author": "Arturo & Sophia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Slothfulsilver/Midterm2_GoT/issues"
+  },
+  "homepage": "https://github.com/Slothfulsilver/Midterm2_GoT#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  }
+}
