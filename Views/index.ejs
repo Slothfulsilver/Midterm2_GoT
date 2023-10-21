@@ -1,45 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
-    <script src="public/script/scripts.js"></script>
-    <title>Game of Thrones Characters</title>
-</head>
-<body>
-    <div class="container">
-        <h1 class="text-center">Game of Thrones Characters</h1>
-        <h1></h1>
-        <!-- Search Bar -->
-        <div class="search-container">
-            <input type="text" id="search-input" class="form-control" placeholder="Search for a character">
-            <button id="search-button" class="btn btn-primary">Search</button>
-        </div>
-        
+    <%- include('../Partials/header.ejs') %>
+    <div class="content">
         <div id="character-container" class="row">
             <% for(var i = 0; i < data.length; i++) { %>
-                <div class="card">
-                    <img src="<%- data[i].imageUrl %>" class="card-img-top" alt="Character Image">
-                    <div class="card-body">
-                        <h5 class="card-title"><%- data[i].id %></h5>
-                        <p class="card-text"><%- data[i].firstName %></p>
-                        <p class="card-text"><%- data[i].lastName %></p>
-                        <p class="card-text"><%- data[i].title %></p>
-                        <p class="card-text"><%- data[i].family %></p>
-                     
+                <div class="col-md-3 mb-3 align-items-stretch">
+                    <div class="card h-100">
+                        <img src="<%- data[i].imageUrl %>" class="card-img-top" alt="Character Image">
+                        <div class="card-body">
+                            <h5 class="card-title"><%- data[i].id %></h5>
+                            <p class="card-text name"><%- data[i].fullName %></p>
+                            <p class="card-text"><h7>First Name: </h7><%- data[i].firstName %></p>
+                            <p class="card-text"><h7>Last Name: </h7><%- data[i].lastName %></p>
+                            <p class="card-text"><h7>Title: </h7><%- data[i].title %></p>
+                            <p class="card-text"><h7>Family: </h7><%- data[i].family %></p>
+                            
+                        </div>
                     </div>
                 </div>
+
             <% } %>
         </div>
 
         <!-- Navigation Buttons -->
-        <div class="pagination-container">
-            <button id="prev-button" class="btn btn-primary">Previous</button>
-          
-            <button id="next-button" class="btn btn-primary">Next</button>
-        </div>
+        <!-- <div class="pagination-container">
+            <button id="prev-button" class="btn btn-secondary">Previous</button>
+            
+            <button id="next-button" class="btn btn-secondary">Next</button>
+        </div> -->
     </div>
-</body>
-</html>
+        <%- include('../Partials/footer.ejs') %>

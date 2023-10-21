@@ -3,37 +3,35 @@ body {
     background-color: #1d1b1b;
     color: #f5f5f5;
     font-family: "Arial", sans-serif;
-    margin: 0;
-    padding: 0;
+
 }
 
-.container {
-    background-color: #2c2c2c;
-    border-radius: 8px;
-    padding: 20px;
-    margin-top: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+.navbar{
+    display: flex;
+    background-color: #dcb168;
+}
+
+.content{
+    position: relative;
+    padding: 2vh;
 }
 
 h1 {
     font-family: "Blackletter", cursive;
     text-align: center;
-    color: #dcb168;
+    color: #1d1b1b;
 }
 
-/* Card Styles */
 .card {
     background-color: #323232;
     color: #f5f5f5;
     border: 2px solid #f5f5f5;
     border-radius: 8px;
-    margin-bottom: 20px;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .card-img-top{
-    width: 200px;
-    height: 200px;
+    height: 40%;
 }
 
 .card:hover {
@@ -41,20 +39,30 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+
 .card-title {
     font-size: 24px;
     font-weight: bold;
     color: #dcb168;
 }
 
+.card-text.name{
+    display: none;
+}
+
 .card-text {
     font-size: 16px;
+    
+}
+
+.card-text  h7 {
+    font-weight: 700;
 }
 
 /* Button Styles */
 .btn-primary {
-    background-color: #dcb168;
-    color: #1d1b1b;
+    background-color: #1d1b1b;
+    color: #dcb168;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -67,11 +75,21 @@ h1 {
     color: #1d1b1b;
 }
 
+.btn-secondary{
+    background-color: #dcb168;
+    color: #1d1b1b;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
 /* Search Bar Styles */
 .search-container {
     display: flex;
-    justify-content: center;
     margin: 20px 0;
+    float: left;
 }
 
 .search-input {
