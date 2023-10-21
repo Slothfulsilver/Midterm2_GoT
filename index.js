@@ -27,17 +27,12 @@ app.get("/", (req, res) => {
    
 });
 
-app.get("/error", (req, res) => {
-    app.render("error.ejs")
-})
 
-app.get("*", (req, res) => { 
-  
-    // Here user can also design an 
-    // error page and render it  
+app.get("*", (req, res) => {  
     res.render('error.ejs');
   }); 
 
 app.listen(3000, () => {
 
 });
+
