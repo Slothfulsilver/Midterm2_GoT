@@ -32,20 +32,7 @@ function displayCharacters(startIndex) {
             const card = document.createElement("div");
             card.classList.add("col-md-4", "mb-4");
             card.innerHTML = `
-                <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Character Image">
-                    <div class="card-body">
-                        <h5 class="card-title">ID: ${character.url.split("/").pop()}</h5>
-                        <p class="card-text">First Name: ${character.firstName || "N/A"}</p>
-                        <p class="card-text">Last Name: ${character.lastName || "N/A"}</p>
-                        <p class="card-text">Born: ${character.born || "N/A"}</p>
-                        <p class="card-text">Died: ${character.died || "N/A"}</p>
-                        <p class="card-text">Title(s): ${character.titles.join(", ") || "N/A"}</p>
-                        <p class="card-text">Aliases: ${character.aliases.join(", ") || "N/A"}</p>
-                        <p class="card-text">Family: ${character.allegiances.join(", ") || "N/A"}</p>
-                        <p class="card-text">Family Crest: ${character.familyCrest || "N/A"}</p>
-                    </div>
-                </div>
+
             `;
             characterContainer.appendChild(card);
         }
